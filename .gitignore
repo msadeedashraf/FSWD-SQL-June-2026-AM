@@ -1,0 +1,5 @@
+*.mdf
+*.ldf
+*.bak
+*.trn
+*.vsidx
