@@ -40,8 +40,21 @@ FROM SalesLT.customer;
 -- Step 6: Simple SELECT query with calculated column
 -- Select and execute the following query to manipulate columns from SalesLT.Product table. 
 -- Note the lack of name for the new calculated column.
-SELECT ProductID, Name, ListPrice, (ListPrice * 1.1)
+select * from SalesLT.Product
+
+SELECT ProductID, Name, ListPrice, (ListPrice * 1.1)  as increased_price
 FROM SalesLT.Product;
+
+select e.firstname  + ' ' + e.lastname as 'Full Name'
+from 
+TSQL.hr.Employees as e 
+
+
+select e.firstname  + ' ' + e.lastname as [Full Name]
+from 
+TSQL.hr.Employees as e 
+
+select [firstname] from TSQL.hr.Employees as e 
 
 
 -- Step 7: Simple SELECT query with calculated column
