@@ -4,8 +4,8 @@
 -- Exercise 2
 ---------------------------------------------------------------------
 
---USE TSQL;
---GO
+USE TSQL;
+GO
 
 ---------------------------------------------------------------------
 -- Task 1
@@ -21,6 +21,14 @@ SELECT  firstname
 		,country
 FROM	HR.Employees
 WHERE	country = 'USA';
+
+
+SELECT  firstname
+		,lastname
+		,city
+		,country
+FROM	HR.Employees
+where	country = 'uk';
 
 ---------------------------------------------------------------------
 -- Task 2

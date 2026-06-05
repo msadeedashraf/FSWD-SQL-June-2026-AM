@@ -13,15 +13,26 @@
 -- Observe the results. Why is the result window empty?
 ---------------------------------------------------------------------
 
-/*
 SELECT	firstname
 		,lastname
 		,city
 		,country
 FROM	HR.Employees
 WHERE	country = 'USA'
-ORDER BY lastname;
-*/
+ORDER BY firstname;
+
+
+SELECT	country , count(*)
+FROM	HR.Employees
+group by country
+
+
+SELECT	country , count(*)
+FROM	HR.Employees
+group by country
+having count(*) > 1
+
+
 
 ---------------------------------------------------------------------
 -- Task 2

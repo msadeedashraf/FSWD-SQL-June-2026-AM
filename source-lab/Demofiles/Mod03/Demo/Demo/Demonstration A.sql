@@ -22,6 +22,10 @@ FROM SalesLT.ProductCategory;
 -- Step 4: Simple SELECT query
 -- Select and execute the following query to retrieve only ProductNumber, 
 -- Name, Color, ListPrice columns from the SalesLT.Product table
+select * from SalesLT.Product
+
+select p.Name,p.Color, p.ListPrice from SalesLT.Product as p
+
 SELECT ProductNumber, Name, Color, ListPrice
 FROM SalesLT.Product;
   
