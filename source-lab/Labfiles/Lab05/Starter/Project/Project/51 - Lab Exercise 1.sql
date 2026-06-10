@@ -10,40 +10,79 @@ GO
 ---------------------------------------------------------------------
 -- Task 1
 -- 
--- Write a SELECT statement that will return the custid, companyname, contactname, address, city, country, and phone columns from the Sales.Customers table. 
+-- Write a SELECT statement that will return the custid, companyname, contactname, 
+--address, city, country, and phone columns from the Sales.Customers table. 
 -- Filter the results to include only the customers from the country Brazil.
 --
 -- Execute the written statement and compare the results that you got with the desired results shown in the file 52 - Lab Exercise  Task 1 Result.txt.
 ---------------------------------------------------------------------
-
-
+select 
+	c.custid, 
+	c.companyname, 
+	c.contactname ,
+	c.address,
+	c.city,
+	c.country,
+	c.phone
+from 
+	sales.customers as c
+where
+	c.country = 'Brazil'
 
 ---------------------------------------------------------------------
 -- Task 2
 -- 
--- Write a SELECT statement that will return the custid, companyname, contactname, address, city, country, and phone columns from the Sales.Customers table. 
+-- Write a SELECT statement that will return the custid, companyname, contactname, address, city, country, and phone columns 
+--from the Sales.Customers table. 
 -- Filter the results to include only customers from the countries Brazil, UK, and USA.
 --
--- Execute the written statement and compare the results that you got with the desired results shown in the file 53 - Lab Exercise 1 - Task 2 Result.txt.
+-- Execute the written statement and compare the results that you got with the desired results shown in the 
+--file 53 - Lab Exercise 1 - Task 2 Result.txt.
 ---------------------------------------------------------------------
 
-
+select 
+	c.custid, 
+	c.companyname, 
+	c.contactname ,
+	c.address,
+	c.city,
+	c.country,
+	c.phone
+from 
+	sales.customers as c
+where
+	c.country in ('Brazil','USA', 'UK' )
 
 ---------------------------------------------------------------------
 -- Task 3
 -- 
--- Write a SELECT statement that will return the custid, companyname, contactname, address, city, country, and phone columns from the Sales.Customers table. 
+-- Write a SELECT statement that will return the custid, companyname, contactname, address, city, country, and phone columns 
+--from the Sales.Customers table. 
 -- Filter the results to include only the customers with a contact name starting with the letter A.
 --
--- Execute the written statement and compare the results that you got with the desired results shown in the file 54 - Lab Exercise 1 - Task 3 Result.txt.
+-- Execute the written statement and compare the results that you got with the desired results shown in the 
+--file 54 - Lab Exercise 1 - Task 3 Result.txt.
 ---------------------------------------------------------------------
 
+select 
+	c.custid, 
+	c.companyname, 
+	c.contactname ,
+	c.address,
+	c.city,
+	c.country,
+	c.phone
+from 
+	sales.customers as c
+where
+	contactname like 'A%'
 
 
 ---------------------------------------------------------------------
 -- Task 4a
 -- 
--- The IT department has written a T-SQL statement that retrieves the custid and companyname columns from the Sales.Customers table and the orderid column from the Sales.Orders table.
+-- The IT department has written a T-SQL statement that retrieves the custid and companyname columns from the Sales.Customers table 
+--and the orderid column from the Sales.Orders table.
 --
 -- Execute the query. Notice two things: 
 --  First, the query retrieves all the rows from the Sales.Customers table. 

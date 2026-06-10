@@ -10,24 +10,60 @@ GO
 ---------------------------------------------------------------------
 -- Task 1
 -- 
--- Write a SELECT statement to return the contactname and contacttitle columns from the Sales.Customers table, assigning “C” as the table alias. Use the table alias C to prefix the names of the two needed columns in the SELECT list. The benefit of using table aliases will become clearer in future modules when topics such as joins and subqueries will be introduced. 
+-- Write a SELECT statement to return the contactname and contacttitle columns from the Sales.Customers table, assigning “C”
+--as the table alias. Use the table alias C to prefix the names of the two needed columns in the SELECT list. 
+--The benefit of using table aliases will become clearer in future modules when topics such as joins and subqueries will be introduced. 
 --
 -- Execute the written statement and compare the result that you got with the recommended result shown in the file Lab Exercise 3 - Task 1 Result.txt.
 ---------------------------------------------------------------------
 
+select 
+	c.contactname, 
+	c.contacttitle 
+from 
+	Sales.Customers as C
+
+
+select 
+	c.contactname, 
+	c.contacttitle 
+from 
+	Sales.Customers as C
+order by c.contactname
+
+
+
+select 
+	c.contactname, 
+	c.contacttitle 
+from 
+	Sales.Customers as C
+order by 2
 
 
 
 ---------------------------------------------------------------------
 -- Task 2
 -- 
--- Write a SELECT statement to return the contactname, contacttitle, and companyname columns from the Sales.Customers table. Assign these columns with the aliases Name, Title, and Company Name, respectively, in order to return more human-friendly column titles for reporting purposes.
+-- Write a SELECT statement to return the 
+--contactname, contacttitle, and companyname 
+--columns from the Sales.Customers table. 
+--Assign these columns with the 
+--aliases Name, Title, and Company Name
+--, respectively, in order to return more 
+--human-friendly column titles for reporting purposes.
 --
 -- Execute the written statement and compare the results that you got with the desired results shown in the file Lab Exercise 3 - Task 2 Result.txt. Notice specifically the titles of the columns in the desired output.
 ---------------------------------------------------------------------
 
 
+select 
+	c.contactname as Name,
+	c.contacttitle as Title,
+	c.companyname as Company
 
+from 
+	Sales.Customers as C
 
 ---------------------------------------------------------------------
 -- Task 3
